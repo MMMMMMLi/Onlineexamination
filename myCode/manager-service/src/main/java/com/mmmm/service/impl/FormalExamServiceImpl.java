@@ -70,7 +70,6 @@ public class FormalExamServiceImpl implements FormalExamService {
 			if (quertionContent.getQuesId().substring(0, 2).equals("RA")) {
 				RaquestionList.add(quertionContent);
 			}
-			System.out.println(quertionContent);
 		}
 		Map<String, Object> result = new HashMap<>();
 		result.put("ChquestionList", ChquestionList);

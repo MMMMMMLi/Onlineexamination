@@ -60,7 +60,6 @@ public class ExamServiceImpl implements ExamService {
 			if (quertionContent.getQuesId().substring(0, 2).equals("RA")) {
 				RaquestionList.add(quertionContent);
 			}
-			System.out.println(quertionContent);
 		}
 		Map<String, Object> result = new HashMap<>();
 		result.put("ChquestionList", ChquestionList);
@@ -83,7 +82,6 @@ public class ExamServiceImpl implements ExamService {
 		} else {
 			userGrade = "N";
 		}
-		System.out.println(achievement);
 
 		// 存取考试信息
 		Grade grade = new Grade();
@@ -115,7 +113,6 @@ public class ExamServiceImpl implements ExamService {
 		grade.setExamGrade(userGrade);
 		grade.setState("1");
 
-		System.out.println(grade);
 		
 		// 修改数据库信息
 		int updateByPrimaryKey = ExamMapper.updateByPrimaryKey(grade);

@@ -48,7 +48,6 @@ public class ExamController {
 		// 获取当前用的用户名以及等级信息
 		User sessionUser = (User) request.getSession().getAttribute("loginuser");
 		Grade sessionGrade = (Grade) request.getSession().getAttribute("usergrade");
-		System.out.println(sessionUser);
 		// 处理考试成绩
 		Map<String, Object> result = ExamService.getNewGrade(sessionUser, sessionGrade, achievement);
 		// 重新往session中存取当前用户的考试等级
@@ -73,9 +72,6 @@ public class ExamController {
 		User sessionUser = (User) request.getSession().getAttribute("loginuser");
 		// 获取
 		List<ExamList> list = ExamService.getExamListByUserId(sessionUser.getId());
-		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i));
-		}
 		return list;
 	}
 	

@@ -33,7 +33,6 @@ public class LoginController {
 		User sessionUser = (User) request.getSession().getAttribute("loginuser");
 		Grade sessionGrade = (Grade) request.getSession().getAttribute("usergrade");
 		
-		System.out.println(sessionUser);
 		System.out.println(sessionGrade);
 		
 		if(sessionUser != null) {
@@ -49,13 +48,11 @@ public class LoginController {
 		}else {
 			// 获取当前用的用户名
 			User loginUser = loginService.getUserByUsername(username);
-			System.out.println(loginUser);
 			// 根据用户id获取其成绩以及等级
 			if(loginUser != null) {
 				Grade userGrade = loginService.getGradeByUserId(loginUser.getId());
 				// 根据用户id获取其考试成绩
 				FormalExam formalExam = loginService.getFormalExamByUserId(loginUser.getId());
-				System.out.println(userGrade);
 				// 判断
 				if (loginUser.getPassword().equals(password)) {
 					

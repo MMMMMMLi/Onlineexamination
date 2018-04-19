@@ -54,7 +54,6 @@ public class FormalExamController {
 	public String examAnList(Integer achievement, HttpServletRequest request) {
 		// 获取当前用的用户名以及等级信息
 		User sessionUser = (User) request.getSession().getAttribute("loginuser");
-		System.out.println(sessionUser);
 		// 处理考试成绩
 		Map<String, Object> result = formalExamService.setformalScore(sessionUser, achievement);
 		// 重新往session存取当前考试成绩

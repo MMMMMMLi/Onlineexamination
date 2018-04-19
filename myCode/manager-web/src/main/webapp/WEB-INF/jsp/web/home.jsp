@@ -76,11 +76,17 @@
            <div class="clr"></div>
            <hr />
           <ul class="sb_menu">
-            <li><a href="#">当前用户:${sessionScope.loginuser.name}</a></li>
-            <li><a href="#">自测等级:${sessionScope.usergrade.grade}</a></li>
-            <li><a href="#">最后一次自测成绩:${sessionScope.usergrade.lastScore}</a></li>
-            <li><a href="#">最好的自测成绩:${sessionScope.usergrade.bestScore}</a></li>
-            <li><a href="#">在线考试成绩:${sessionScope.userFormalExam}</a></li>
+            <li><a href="#">学校召开期初教学检查工作总结会议</a></li>
+            <li><a href="#">学校召开2018年度教学督导会议</a></li>
+            <li><a href="#">学校召开期末教学工作专题会议 </a></li>
+            <li><a href="#">我校在山东省第八届高等教育教学成果奖评选中喜获佳绩</a></li>
+            <li><a href="#">学校召开教学重点工作推进会</a></li>
+            <li><a href="#">我校在省师范类高校学生从业技能大赛中获佳绩</a></li>
+            <li><a href="#">山东省高等学校在线开放课程建设等3个实施方案发布</a></li>
+            <li><a href="#">学校举办在线开放课程建设培训会</a></li>
+            <li><a href="#">学校召开教学工作例会</a></li>
+            <li><a href="#">我校教务处及相关学院赴德州学院考察交流</a></li>
+            <a href="#" class="rm">查看更多 &raquo;</a></p>
           </ul>
         </div>
       </div>
@@ -92,14 +98,12 @@
     <div class="fbg_resize">
       <div class="col c1">
         <h2><span>Image Gallery</span></h2>
-		<!--
-        <a href="#"><img src="images/pix1.jpg" width="58" height="58" alt="pix" /></a>
-        <a href="#"><img src="images/pix2.jpg" width="58" height="58" alt="pix" /></a>
-        <a href="#"><img src="images/pix3.jpg" width="58" height="58" alt="pix" /></a>
-        <a href="#"><img src="images/pix4.jpg" width="58" height="58" alt="pix" /></a>
-        <a href="#"><img src="images/pix5.jpg" width="58" height="58" alt="pix" /></a>
-        <a href="#"><img src="images/pix6.jpg" width="58" height="58" alt="pix" /></a>
-		-->
+        <a href="#"><img src="../img/pix1.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="../img/pix2.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="../img/pix3.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="../img/pix4.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="../img/pix5.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="../img/pix6.jpg" width="58" height="58" alt="pix" /></a>
       </div>
       <div class="col c2">
         <h2><span>System introduction</span></h2>
@@ -108,16 +112,17 @@
       <div class="col c3">
         <h2><span>Contact</span></h2>
         <p>If you want to contact me, I can pass the following methods..</p>
-        <p><a href="#">你学校的主页</a></p>
-        <p>你学校的电话号<br />
-        <p>Address: 你学校的地址</p>
+        <p><a href="http://www.bztc.edu.cn/">滨州学院</a></p>
+        <p>0543-3190016 （校办)</p>
+        <p>0543-3190201 （招办）</p>
+        <p>Address: 山东省滨州市黄河五路391号</p>
       </div>
       <div class="clr"></div>
     </div>
   </div>
   <div class="footer">
     <div class="footer_resize">
-      <p class="lf">&copy; To write Myself. Collect From Network</p>
+      <p class="lf">&copy;Powered by Myself. Collect From Network</p>
       <ul class="fmenu">
         <li class="active"><a href="#">首页</a></li>
            <li><a href="/manager-web/exam/selfTest?grade=${sessionScope.usergrade.grade}">用户自测</a></li>

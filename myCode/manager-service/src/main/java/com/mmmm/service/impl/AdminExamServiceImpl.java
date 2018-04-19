@@ -60,7 +60,6 @@ public class AdminExamServiceImpl implements AdminExamService {
 	public void deleteExam(String quesId) {
 		String[] split = quesId.split(",");
 		for (int i = 0; i < split.length; i++) {
-			System.out.println(split[i]);
 			adminExamMapper.deleteExam(split[i]);
 			adminExamMapper.deleteExamQuestion(split[i]);
 		}

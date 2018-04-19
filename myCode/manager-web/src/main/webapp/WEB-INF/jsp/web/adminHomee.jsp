@@ -21,9 +21,10 @@
 
 	<body class="easyui-layout">
 		<div data-options="region:'north',border:false" style="height:70px;padding:10px;">
-			<div>
-				<img src="../img/logo.png" border="0">
+			<div style="position: absolute;left: 30px;top:8px;">
+				<img src="../img/logo.png" border="0" width="58" height="58" >
 			</div>
+			<div style="position: absolute;left: 120px;top:30px;"><font size="5" color="#0066CC">在线考试系统后台管理</font></div>
 			<div id="sessionInfoDiv" style="position: absolute;right: 5px;top:10px;">
 				[<strong>${sessionScope.loginuser.name}</strong>]，欢迎你！
 			</div>
@@ -51,7 +52,7 @@
 					<tr>
 						<td style="width: 400px;">
 							<div style="color: #999; font-size: 8pt;">
-								在线考试系统管理平台 | Powered by <a href="#">XXX</a>
+								在线考试系统管理平台 | Powered by <a href="http://www.bztc.edu.cn/">滨州学院</a>
 							</div>
 						</td>
 					</tr>

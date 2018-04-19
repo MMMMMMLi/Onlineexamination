@@ -68,14 +68,12 @@
     <div class="fbg_resize">
       <div class="col c1">
         <h2><span>Image Gallery</span></h2>
-		<!--
-        <a href="#"><img src="images/pix1.jpg" width="58" height="58" alt="pix" /></a>
-        <a href="#"><img src="images/pix2.jpg" width="58" height="58" alt="pix" /></a>
-        <a href="#"><img src="images/pix3.jpg" width="58" height="58" alt="pix" /></a>
-        <a href="#"><img src="images/pix4.jpg" width="58" height="58" alt="pix" /></a>
-        <a href="#"><img src="images/pix5.jpg" width="58" height="58" alt="pix" /></a>
-        <a href="#"><img src="images/pix6.jpg" width="58" height="58" alt="pix" /></a>
-		-->
+		<a href="#"><img src="../img/pix1.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="../img/pix2.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="../img/pix3.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="../img/pix4.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="../img/pix5.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="../img/pix6.jpg" width="58" height="58" alt="pix" /></a>
       </div>
       <div class="col c2">
         <h2><span>System introduction</span></h2>
@@ -84,16 +82,17 @@
       <div class="col c3">
         <h2><span>Contact</span></h2>
         <p>If you want to contact me, I can pass the following methods..</p>
-        <p><a href="#">你学校的主页</a></p>
-        <p>你学校的电话号<br />
-        <p>Address: 你学校的地址</p>
+        <p><a href="http://www.bztc.edu.cn/">滨州学院</a></p>
+        <p>0543-3190016 （校办)</p>
+        <p>0543-3190201 （招办）</p>
+        <p>Address: 山东省滨州市黄河五路391号</p>
       </div>
       <div class="clr"></div>
     </div>
   </div>
   <div class="footer">
     <div class="footer_resize">
-      <p class="lf">&copy; To write Myself. Collect From Network</p>
+      <p class="lf">&copy;Powered by Myself. Collect From Network</p>
       <ul class="fmenu">
         <li class="active"><a href="#">首页</a></li>
            <li><a href="/manager-web/exam/selfTest?grade=${sessionScope.usergrade.grade}">用户自测</a></li>

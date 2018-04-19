@@ -78,5 +78,10 @@ public class ExamController {
 		}
 		return list;
 	}
+	
+	@RequestMapping("examListPage")
+	public String examListPage() {
+		return "/WEB-INF/jsp/web/home2.jsp";
+	}
 
 }

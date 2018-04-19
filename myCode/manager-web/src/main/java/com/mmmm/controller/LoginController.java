@@ -93,4 +93,10 @@ public class LoginController {
 		session.invalidate();
 		return "/WEB-INF/jsp/web/login.jsp";
 	}
+	
+	// 返回首页
+	@RequestMapping("goIndex")
+	public String goIndex(){
+		return "/WEB-INF/jsp/web/home.jsp";
+	}
 }

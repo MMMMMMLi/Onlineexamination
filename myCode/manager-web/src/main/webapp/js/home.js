@@ -1,3 +1,7 @@
+$(document).ready(function(){  
+	getExamList();//执行函数
+});  
+
 function getExamList() {
 
 	$.ajax({

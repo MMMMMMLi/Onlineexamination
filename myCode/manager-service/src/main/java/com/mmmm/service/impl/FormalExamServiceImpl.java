@@ -9,6 +9,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mmmm.entity.ExamQuestion;
 import com.mmmm.entity.FormalExam;
@@ -25,6 +26,7 @@ import com.mmmm.service.FormalExamService;
  *
  */
 @Service
+@Transactional
 public class FormalExamServiceImpl implements FormalExamService {
 
 	@Autowired

@@ -11,6 +11,7 @@ import java.util.Random;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mmmm.entity.Exam;
 import com.mmmm.entity.ExamList;
@@ -29,6 +30,7 @@ import com.mmmm.service.ExamService;
  */
 
 @Service
+@Transactional
 public class ExamServiceImpl implements ExamService {
 
 	@Autowired

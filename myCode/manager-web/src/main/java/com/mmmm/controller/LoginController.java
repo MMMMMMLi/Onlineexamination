@@ -31,12 +31,10 @@ public class LoginController {
 	public String login(Model model, String username, String password,HttpServletRequest request) {
 		// 要判断session里面有没有用户信息
 		User sessionUser = (User) request.getSession().getAttribute("loginuser");
-		Grade sessionGrade = (Grade) request.getSession().getAttribute("usergrade");
 		
-		System.out.println(sessionGrade);
+		// 如果账户没有
 		
 		if(sessionUser != null) {
-			request.getSession().setAttribute("msg", "欢迎回来~");
 			// 判断用户的权限
 			if (sessionUser.getRole() == 1) {
 				// 管理员
@@ -46,17 +44,17 @@ public class LoginController {
 				return "/WEB-INF/jsp/web/home.jsp";
 			}
 		}else {
-			// 获取当前用的用户名
+			// 根据用户名获取用户信息
 			User loginUser = loginService.getUserByUsername(username);
 			// 根据用户id获取其成绩以及等级
 			if(loginUser != null) {
 				Grade userGrade = loginService.getGradeByUserId(loginUser.getId());
-				// 根据用户id获取其考试成绩
-				FormalExam formalExam = loginService.getFormalExamByUserId(loginUser.getId());
 				// 判断
 				if (loginUser.getPassword().equals(password)) {
 					
-					request.getSession().setAttribute("msg", "登陆成功");
+					// 根据用户id获取其考试成绩
+					FormalExam formalExam = loginService.getFormalExamByUserId(loginUser.getId());
+					
 					request.getSession().setAttribute("loginuser", loginUser);
 					
 					// 判断用户的权限

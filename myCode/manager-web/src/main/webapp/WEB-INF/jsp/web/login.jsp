@@ -1,15 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="mm" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>欢迎登陆XX在线考试系统</title>
-<script type="text/javascript"></script>
+<title>欢迎登陆滨州学院在线考试系统</title>
 <link rel="stylesheet" href="../css/login.css" type="text/css">
 </head>
 <body>
+	<%
+		if(session.getAttribute("loginuser") != null) {
+			response.sendRedirect(request.getContextPath() + "/home/login");
+		}
+		
+	%>
 	<div id="background"
 		style="position: absolute; z-index: -1; width: 100%; height: 100%; top: 0px; left: 0px;">
 		<img src="../img/login.png" width="100%" height="100%" />

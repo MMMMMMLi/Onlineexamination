@@ -12,11 +12,14 @@
 		<link href="../css/main.css" rel="stylesheet" type="text/css" />
 		<link href="../css/iconfont.css" rel="stylesheet" type="text/css" />
 		<link href="../css/test.css" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="../css/easyui.css" />
 		<link rel="stylesheet" href="../css/icon.css" />
 		<style>
 			.hasBeenAnswer {
 				background: #5d9cec;
+				color: #fff;
+			}
+			.hasWrong {
+				background: #FF0000;
 				color: #fff;
 			}
 		</style>
@@ -31,7 +34,7 @@
 					<div class="test">
 						<form id="examForm">
 							<input type="hidden" id="examtype" name="examtype" value="${examtype}">
-							<div class="test_title">
+							<div class="test_title" id="time1">
 								<p class="test_time">
 									<i class="icon iconfont">&#xe6fb;</i><b class="alt-1">01:00</b>
 								</p>
@@ -55,7 +58,7 @@
 												<font>${Ju.quesContent}</font><b class="icon iconfont">&#xe881;</b>
 											</div>
 											<input type="hidden" id="JuAn${status.count}" name="JuAn${status.count}" value="${Ju.juAnswer}">
-
+											<input type="hidden" id="JuQuesId${status.count}" name="JuQuesId${status.count}" value="${Ju.quesId}">
 											<div class="test_content_nr_main">
 												<ul>
 
@@ -93,6 +96,7 @@
 												<font>${Ra.quesContent}</font><b class="icon iconfont">&#xe881;</b>
 											</div>
 											<input type="hidden" id="RaAn${status.count}" name="RaAn${status.count}" value="${Ra.chAnswer}">
+											<input type="hidden" id="RaQuesId${status.count}" name="RaQuesId${status.count}" value="${Ra.quesId}">
 											<div class="test_content_nr_main">
 												<ul>
 
@@ -138,6 +142,7 @@
 												<font>${CH.quesContent}</font><b class="icon iconfont">&#xe881;</b>
 											</div>
 											<input type="hidden" id="ChAn${status.count}" name="ChAn${status.count}" value="${CH.chAnswer}">
+											<input type="hidden" id="ChQuesId${status.count}" name="ChQuesId${status.count}" value="${CH.quesId}">
 											<div class="test_content_nr_main">
 												<ul>
 
@@ -179,7 +184,7 @@
 								<h1>
 								<i class="icon iconfont">&#xe692;</i>答题卡
 							</h1>
-								<p class="test_time">
+								<p class="test_time" id="time2">
 									<i class="icon iconfont">&#xe6fb;</i><b class="alt-1">01:00</b>
 								</p>
 							</div>
@@ -195,7 +200,7 @@
 									<ul>
 										<c:forEach items="${JuquestionList}" var="Ju" varStatus="status">
 											<li>
-												<a href="#${Ju.quesId}">${status.count}</a>
+												<a href="#${Ju.quesId}" id="dtk${Ju.quesId}">${status.count}</a>
 											</li>
 										</c:forEach>
 									</ul>
@@ -212,7 +217,7 @@
 									<ul>
 										<c:forEach items="${RaquestionList}" var="Ra" varStatus="status">
 											<li>
-												<a href="#${Ra.quesId}">${status.count}</a>
+												<a href="#${Ra.quesId}" id="dtk${Ra.quesId}">${status.count}</a>
 											</li>
 										</c:forEach>
 									</ul>
@@ -230,10 +235,53 @@
 									<ul>
 										<c:forEach items="${ChquestionList}" var="Ch" varStatus="status">
 											<li>
-												<a href="#${Ch.quesId}">${status.count}</a>
+												<a href="#${Ch.quesId}" id="dtk${Ch.quesId}">${status.count}</a>
 											</li>
 										</c:forEach>
 									</ul>
+								</div>
+							</div>
+							<div class="rt_nr1_title" style="display:none;" id="cjDiv">
+								<h1>
+									<i class="icon iconfont">&#xe692;</i>测试成绩
+								</h1>
+								<p>
+									<i class="content_lit" id="achievement" style="color: red;" ></i><span>分</span>
+								</p>
+							</div>
+							<!--<div class="rt_content" style="display:none;" id="ctDiv">
+								<div class="rt_content_tt">
+									<h2>错题及答案</h2>
+								</div>
+								<div class="rt_content_nr answerSheet">
+									<p>判断题</p>
+									<p id="pd1">第一题:对</p>
+									<p>单选题</p>
+									<table>
+										<tr>
+											<td>题号</td>
+											<td>答案</td>
+										</tr>
+										<tr>
+											
+										</tr>
+									</table>
+									<p>多选题</p>
+									<table>
+										<tr>
+											<td>题号</td>
+											<td>答案</td>
+										</tr>
+										<tr>
+											
+										</tr>
+									</table>
+								</div>
+							</div>-->
+							<div class="rt_content" style="display:none;" id="btnDiv">
+								<div class="rt_content_tt">
+									<h2><a href="/manager-web/home/login">返回首页</a></h2>
+									<!--<font><input type="button" id="rowBackBtn" name="rowBackBtn" value="返回"></font>-->
 								</div>
 							</div>
 
@@ -248,9 +296,6 @@
 		</div>
 		<script src="../js/jquery-1.11.3.min.js"></script>
 		<script src="../js/jquery.easy-pie-chart.js"></script>
-		<!-- 导入 easyui 类库 -->
-		<script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
-		<script type="text/javascript" src="../js/easyui-lang-zh_CN.js"></script>
 		<!--时间js-->
 		<script src="../js/jquery.countdown.js"></script>
 		<script src="../js/exam.js"></script>

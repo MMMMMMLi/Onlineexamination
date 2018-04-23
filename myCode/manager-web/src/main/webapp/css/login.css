@@ -18,7 +18,6 @@
     background: -webkit-gradient(linear, left top, left 24, from(#EEE), color-stop(4%, #FFF), to(#EEE)); 
     background: -moz-linear-gradient(top, #EEE, #FFF 1px, #EEE 24px); 
     background: -o-linear-gradient(top, #EEEEEE, #FFFFFF 1px, #EEEEEE 24px); 
-	background-image:url(file:///D|/%E5%8F%AF%E8%A7%86%E5%8C%96/34_%E7%88%B1%E5%A5%87%E8%89%BA.jpg)
 } 
 .loginForm:before { 
     content:''; 
@@ -46,10 +45,8 @@ fieldset {
     padding:10px 10px 0; 
 } 
 fieldset input[type=text] { 
-    background:url(file:///D|/%E5%8F%AF%E8%A7%86%E5%8C%96/style/default/images/user.png) 4px 5px no-repeat; 
 } 
 fieldset input[type=password] { 
-    background:url(file:///D|/%E5%8F%AF%E8%A7%86%E5%8C%96/style/default/images/password.png) 4px 5px no-repeat; 
 } 
 fieldset input[type=text], fieldset input[type=password] { 
     width:100%; 

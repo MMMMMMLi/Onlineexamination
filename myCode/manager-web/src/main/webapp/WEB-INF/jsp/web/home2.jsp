@@ -53,7 +53,7 @@
            <hr />
           <ul class="sb_menu">
             <li><a href="#">当前用户:${sessionScope.loginuser.name}</a></li>
-            <li><a href="#">自测等级:${sessionScope.usergrade.grade}</a></li>
+            <!--<li><a href="#">自测等级:${sessionScope.usergrade.grade}</a></li>-->
             <li><a href="#">最后一次自测成绩:${sessionScope.usergrade.lastScore}</a></li>
             <li><a href="#">最好的自测成绩:${sessionScope.usergrade.bestScore}</a></li>
             <li><a href="#">在线考试成绩:${sessionScope.userFormalExam}</a></li>

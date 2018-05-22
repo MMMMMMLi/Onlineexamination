@@ -7,6 +7,8 @@ window.jQuery(function($) {
 
 });
 
+var userGrade = "N";
+
 $(function() {
 	$('li.option label').click(
 		function() {
@@ -92,11 +94,23 @@ $(function() {
 						// $(window).attr('location', '/manager-web/home/login');
 						// 自测完毕后,显示成绩 以及错题和正确答案
 						$("#cjDiv").show();
+						$("#djDiv").show();
+						$("#ageinDiv").show();
 						$("#btnDiv").show();
 						$("#ctDiv").show();
 						$("#time1").hide();
 						$("#time2").hide();
 						$("#achievement").text(achievement);
+						if(achievement >= 0 && achievement < 60) {
+							userGrade = "C";
+						} else if(achievement >= 60 && achievement < 80) {
+							userGrade = "B";
+						} else if(achievement >= 80 && achievement <= 100) {
+							userGrade = "A";
+						} else {
+							userGrade = "N";
+						}
+						$("#userGrade").text(userGrade);
 						// removeClass('hasWrong');
 						// addClass('hasWrong');
 						for(var [key, value] of JuwrongMap) {
@@ -188,3 +202,7 @@ $(function() {
 	});
 
 });
+
+function ageinExam() {
+	window.location.href = "/manager-web/exam/selfTest?grade="+userGrade;
+}

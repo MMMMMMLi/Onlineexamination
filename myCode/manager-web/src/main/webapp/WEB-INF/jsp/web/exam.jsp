@@ -249,6 +249,14 @@
 									<i class="content_lit" id="achievement" style="color: red;" ></i><span>分</span>
 								</p>
 							</div>
+							<div class="rt_nr1_title" style="display:none;" id="djDiv">
+								<h1>
+									<i class="icon iconfont">&#xe692;</i>测试等级
+								</h1>
+								<p>
+									<i class="content_lit" id="userGrade" style="color: red;" ></i><span>级</span>
+								</p>
+							</div>
 							<!--<div class="rt_content" style="display:none;" id="ctDiv">
 								<div class="rt_content_tt">
 									<h2>错题及答案</h2>
@@ -278,6 +286,12 @@
 									</table>
 								</div>
 							</div>-->
+							<div class="rt_content" style="display:none;" id="ageinDiv">
+								<div class="rt_content_tt">
+									<h2><a href="#" onclick="ageinExam()">重新测试</a></h2>
+									<!--<font><input type="button" id="rowBackBtn" name="rowBackBtn" value="返回"></font>-->
+								</div>
+							</div>
 							<div class="rt_content" style="display:none;" id="btnDiv">
 								<div class="rt_content_tt">
 									<h2><a href="/manager-web/home/login">返回首页</a></h2>

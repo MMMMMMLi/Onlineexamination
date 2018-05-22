@@ -75,11 +75,11 @@ public class ExamServiceImpl implements ExamService {
 	public Map<String, Object> getNewGrade(User sessionUser, Grade sessionGrade, Integer achievement) {
 		// 获取当前用户信息
 		String userGrade = "N";
-		if (achievement >= 0 && achievement < 6) {
+		if (achievement >= 0 && achievement < 60) {
 			userGrade = "C";
-		} else if (achievement >= 6 && achievement < 10) {
+		} else if (achievement >= 60 && achievement < 80) {
 			userGrade = "B";
-		} else if (achievement >= 10 && achievement <= 14) {
+		} else if (achievement >=80 && achievement <= 100) {
 			userGrade = "A";
 		} else {
 			userGrade = "N";

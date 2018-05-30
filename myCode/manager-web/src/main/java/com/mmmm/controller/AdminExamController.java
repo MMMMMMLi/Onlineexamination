@@ -50,6 +50,7 @@ public class AdminExamController {
 	// 添加题目
 	@RequestMapping("addQuestions")
 	public String addQuestions(Questions questions) {
+		System.out.println("------------"+questions);
 		int addQuestions = adminExamService.addQuestions(questions);
 		if (addQuestions > 0) {
 			return "/page/menupage/questionList.jsp";

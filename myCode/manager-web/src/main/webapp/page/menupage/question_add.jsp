@@ -71,7 +71,7 @@
 					<tr>
 						<td>题目编号</td>
 						<td>
-							<input type="text"  id="quesId" name="quesId" class="easyui-validatebox" data-options="required:true" placeholder="CH_单选RA_多选JU_判断" />
+							<input type="text"  id="quesId" name="quesId" class="easyui-validatebox" data-options="required:true" placeholder="RA_单选CH_多选JU_判断" />
 							<span id='errorMsg'>
 						</td>
 					</tr>
@@ -90,43 +90,43 @@
 					<tr>
 						<td>选项A</td>
 						<td>
-							<input type="text" name="chOptiona" class="easyui-validatebox" data-options="required:true" />
+							<input type="text" name="chOptiona" class="easyui-validatebox" />
 						</td>
 					</tr>
 					<tr>
 						<td>选项B</td>
 						<td>
-							<input type="text" name="chOptionb" class="easyui-validatebox" data-options="required:true" />
+							<input type="text" name="chOptionb" class="easyui-validatebox" />
 						</td>
 					</tr>
 					<tr>
 						<td>选项C</td>
 						<td>
-							<input type="text" name="chOptionc" class="easyui-validatebox" data-options="required:true" />
+							<input type="text" name="chOptionc" class="easyui-validatebox"  />
 						</td>
 					</tr>
 					<tr>
 						<td>选项D</td>
 						<td>
-							<input type="text" name="chOptiond" class="easyui-validatebox" data-options="required:true" />
+							<input type="text" name="chOptiond" class="easyui-validatebox"  />
 						</td>
 					</tr>
 					<tr>
 						<td>判断题答案</td>
 						<td>
-							<input type="text " name="juAnswer " class="easyui-validatebox "/>
+							<input type="text " name="juAnswer" class="easyui-validatebox "/>
 						</td>
 					</tr>
 					<tr>
 						<td>选择题答案</td>
 						<td>
-							<input type="text " name="chAnswer " class="easyui-validatebox "/>
+							<input type="text " name="chAnswer" class="easyui-validatebox "/>
 						</td>
 					</tr>
 					<tr>
 						<td>状态</td>
 						<td>
-							<input type="text " name="state " class="easyui-validatebox " data-options="required:true "/>
+							<input type="text " name="state" class="easyui-validatebox " data-options="required:true "/>
 						</td>
 					</tr>
 				</table>

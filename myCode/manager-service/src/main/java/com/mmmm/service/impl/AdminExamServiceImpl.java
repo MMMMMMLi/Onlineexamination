@@ -42,6 +42,12 @@ public class AdminExamServiceImpl implements AdminExamService {
 		return adminExamMapper.addQuestions(questions);
 	}
 	
+	// 修改考试题目
+	@Override
+	public int exitQuestions(Questions questions) {
+		return adminExamMapper.exitQuestions(questions);
+	}
+	
 	// 删除题目
 	@Override
 	public void deleteQuestion(String quesId) {
@@ -91,4 +97,5 @@ public class AdminExamServiceImpl implements AdminExamService {
 	public int exitformalExamId(String examid) {
 		return adminExamMapper.exitformalExamId(examid);
 	}
+
 }

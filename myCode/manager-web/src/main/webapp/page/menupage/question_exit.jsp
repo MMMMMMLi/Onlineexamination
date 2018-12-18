@@ -71,7 +71,7 @@
 					<tr>
 						<td>题目编号</td>
 						<td>
-							<input type="text"  id="quesId" value="<%=request.getParameter("quesId")%>" class="easyui-validatebox" data-options="required:true" placeholder="CH_单选RA_多选JU_判断" readonly="readonly" />
+							<input type="text"  id="quesId"  name="quesId" value="<%=request.getParameter("quesId")%>" class="easyui-validatebox" data-options="required:true" placeholder="CH_单选RA_多选JU_判断" readonly="readonly" />
 							<span id='errorMsg'>
 						</td>
 					</tr>
@@ -114,19 +114,19 @@
 					<tr>
 						<td>判断题答案</td>
 						<td>
-							<input type="text " name="juAnswer " value="<%=request.getParameter("juAnswer")%>"  class="easyui-validatebox "/>
+							<input type="text" name="juAnswer" value="<%=request.getParameter("juAnswer")%>"  class="easyui-validatebox "/>
 						</td>
 					</tr>
 					<tr>
 						<td>选择题答案</td>
 						<td>
-							<input type="text " name="chAnswer " value="<%=request.getParameter("chAnswer")%>"  class="easyui-validatebox "/>
+							<input type="text" name="chAnswer" value="<%=request.getParameter("chAnswer")%>"  class="easyui-validatebox "/>
 						</td>
 					</tr>
 					<tr>
 						<td>状态</td>
 						<td>
-							<input type="text " name="state " value="<%=request.getParameter("state")%>"  class="easyui-validatebox " data-options="required:true "/>
+							<input type="text" name="state" value="<%=request.getParameter("state")%>"  class="easyui-validatebox " data-options="required:true "/>
 						</td>
 					</tr>
 				</table>

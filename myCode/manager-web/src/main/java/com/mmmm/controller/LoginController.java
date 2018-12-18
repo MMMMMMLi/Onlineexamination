@@ -31,7 +31,7 @@ public class LoginController {
 	public String login(Model model, String username, String password, HttpServletRequest request) {
 		// 要判断session里面有没有用户信息
 		User sessionUser = (User) request.getSession().getAttribute("loginuser");
-
+		
 		/*	二次登陆后台判断 效果不理想 改到前台判断.	*/
 		// 当用户登陆以后,再次二次登陆时,如果二次登陆的不是当前用户,重置用户session
 		// if (sessionUser != null) {

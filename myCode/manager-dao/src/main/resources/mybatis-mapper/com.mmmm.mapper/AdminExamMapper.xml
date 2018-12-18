@@ -73,6 +73,20 @@
 		#{state,jdbcType=VARCHAR})
 	</insert>
 
+	<update id="exitQuestions" parameterType="com.mmmm.entity.Questions">
+		update mm_questions set
+		QUES_LEVEL = #{quesLevel,jdbcType=VARCHAR},
+		QUES_CONTENT = #{quesContent,jdbcType=VARCHAR},
+		CH_OPTIONA =#{chOptiona,jdbcType=VARCHAR},
+		CH_OPTIONB =#{chOptionb,jdbcType=VARCHAR},
+		CH_OPTIONC =#{chOptionc,jdbcType=VARCHAR},
+		CH_OPTIOND = #{chOptiond,jdbcType=VARCHAR},
+		JU_ANSWER = #{juAnswer,jdbcType=VARCHAR},
+		CH_ANSWER = #{chAnswer,jdbcType=VARCHAR},
+		STATE = #{state,jdbcType=VARCHAR}
+		where QUES_ID = #{quesId,jdbcType=VARCHAR}
+	</update>
+
 	<delete id="deleteQuestion" parameterType="string">
 		delete from
 		mm_questions
@@ -142,9 +156,11 @@
 	</insert>
 
 	<update id="exitformalExamId" parameterType="string">
-		update mm_formalExamId
+		update
+		mm_formalExamId
 		set formalExamId = #{examid,jdbcType=VARCHAR}
-		WHERE ID = 1
+		WHERE ID =
+		1
 
 	</update>
 </mapper> 

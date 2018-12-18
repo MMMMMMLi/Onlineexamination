@@ -31,4 +31,6 @@ public interface AdminExamMapper {
 
 	int exitformalExamId(String examid);
 
+	int exitQuestions(Questions questions);
+
 }

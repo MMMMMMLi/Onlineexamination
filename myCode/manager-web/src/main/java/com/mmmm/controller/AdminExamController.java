@@ -58,7 +58,19 @@ public class AdminExamController {
 			return "/WEB-INF/jsp/web/404.jsp";
 		}
 	}
-
+	
+	// 修改试题
+	@RequestMapping("exitQuestions")
+	public String exitQuestions(Questions questions) {
+		System.out.println("------------"+questions);
+		int addQuestions = adminExamService.exitQuestions(questions);
+		if (addQuestions > 0) {
+			return "/page/menupage/questionList.jsp";
+		} else {
+			return "/WEB-INF/jsp/web/404.jsp";
+		}
+	}
+	
 	// 删除题目
 	@RequestMapping(value = "deleteQuestions", method = RequestMethod.GET)
 	public String deleteUser(String ids) {

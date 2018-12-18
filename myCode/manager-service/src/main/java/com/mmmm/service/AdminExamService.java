@@ -27,4 +27,6 @@ public interface AdminExamService {
 
 	int exitformalExamId(String examid);
 
+	int exitQuestions(Questions questions);
+
 }
